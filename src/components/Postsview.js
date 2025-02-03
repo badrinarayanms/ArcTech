@@ -36,9 +36,12 @@ const Postsview = () => {
       
 
       <Grid container justifyContent="center" sx={{ my: 4 }}>
-        <Grid item xs={12} md={6}>
-          {!loading?<TableContainer component={Paper} elevation={4}>
-            <Table aria-label="simple table">
+        <Grid item xs={12} md={6} padding={2}>
+          {!loading?<TableContainer  sx={{
+                  width: '100%',
+                  overflowX: 'auto', // Enable horizontal scrolling for small screens
+                }} component={Paper}  elevation={4}>
+            <Table   aria-label="simple table">
               <TableHead>
                 <TableRow>
                   <TableCell>Title</TableCell>
@@ -49,13 +52,13 @@ const Postsview = () => {
               <TableBody>
                 {posts.map((post) => (
                   <TableRow key={post.id}>
-                    <TableCell>{post.title}</TableCell>
-                    <TableCell>{post.body}</TableCell>
-                    <TableCell  >
+                    <TableCell sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }}>{post.title}</TableCell>
+                    <TableCell sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }}>{post.body}</TableCell>
+                    <TableCell sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }} >
                     <Box display="flex" flexDirection="column" gap={1}>
                     <Commentview postid={post.id}/> 
                     
-                      <Button onClick={() => handleDelete(post.id)} variant='outlined' fullWidth color="primary">
+                      <Button size='small' onClick={() => handleDelete(post.id)} variant='outlined' fullWidth color="primary">
                         Delete
                       </Button>
                     </Box>

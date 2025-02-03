@@ -42,7 +42,7 @@ export default function ScrollDialog({postid=1}) {
   }, [open]);
   return (
     <React.Fragment>
-      <Button fullWidth variant='contained' onClick={handleClickOpen('paper',postid)}>View Comments</Button>
+      <Button size='small' fullWidth variant='contained' onClick={handleClickOpen('paper',postid)}>View Comments</Button>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -63,6 +63,7 @@ export default function ScrollDialog({postid=1}) {
      
     <Box key={com.id}>
         <DialogContentText
+        sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }}
             id="scroll-dialog-description"
             ref={descriptionElementRef}
             tabIndex={-1}

@@ -52,9 +52,9 @@ const Postsview = () => {
               <TableBody>
                 {posts.map((post) => (
                   <TableRow key={post.id}>
-                    <TableCell sx={{textAlign:{xs:'justify',md:'none'}, fontSize: { xs: '0.6rem', sm: '1rem', md: '1.2rem' } }}>{post.title}</TableCell>
-                    <TableCell sx={{textAlign:{xs:'justify',md:'none'},fontSize: { xs: '0.5rem', sm: '1rem', md: '1.2rem' } }}>{post.body}</TableCell>
-                    <TableCell sx={{textAlign:{xs:'justify',md:'none'}, fontSize: { xs: '0.6rem', sm: '1rem', md: '1.2rem' } }} >
+                    <TableCell sx={{textAlign:{xs:'justify',md:'left'}, fontSize: { xs: '0.6rem', sm: '1rem', md: '1.2rem' } }}>{post.title}</TableCell>
+                    <TableCell sx={{textAlign:{xs:'justify',md:'left'},fontSize: { xs: '0.5rem', sm: '1rem', md: '1.2rem' } }}>{post.body}</TableCell>
+                    <TableCell sx={{textAlign:{xs:'justify',md:'left'}, fontSize: { xs: '0.6rem', sm: '1rem', md: '1.2rem' } }} >
                     <Box display="flex" flexDirection="column" gap={1}>
                     <Commentview postid={post.id}/> 
                     

@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todosReducer from "./slice/todoSlice";
+import postReducer from "./slice/postSlice";
+import commentsReducer from "./slice/commentSlice"
 
 const store= configureStore({
     reducer:{
-        todos:todosReducer,
+        posts:postReducer,
+        comments:commentsReducer,
     },
 });
 

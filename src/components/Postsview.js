@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPosts, deletepost, addpost } from '../slice/postSlice';
+import { fetchPosts, deletepost } from '../slice/postSlice';
 import { Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Paper, Grid, Button, Box, Typography } from '@mui/material';
 import Commentview from './Commentview';
  

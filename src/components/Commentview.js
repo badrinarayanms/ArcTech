@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { addcomment,fetchComments  } from '../slice/commentSlice';
+import { fetchComments  } from '../slice/commentSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { Box, Divider, Paper } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 
 export default function ScrollDialog({postid=1}) {
     const [open, setOpen] = React.useState(false);
@@ -18,10 +17,7 @@ export default function ScrollDialog({postid=1}) {
  
   const commentslist = useSelector((state) => state.comments.comments );
   const loading = useSelector((state) => state.comments.loading);
-   
-  const handleDelete = (id) => {
-    dispatch( );
-  };
+ 
  
 
   const handleClickOpen = (scrollType) => () => {

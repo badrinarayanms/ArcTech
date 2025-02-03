@@ -42,7 +42,7 @@ export default function ScrollDialog({postid=1}) {
   }, [open]);
   return (
     <React.Fragment>
-      <Button size='small' fullWidth variant='contained' onClick={handleClickOpen('paper',postid)}>View Comments</Button>
+      <Button size='small' sx={{textAlign:"center", fontSize: { xs: '0.4rem', sm: '1rem', md: '1.2rem' } }}fullWidth variant='contained' onClick={handleClickOpen('paper',postid)}>View Comments</Button>
       <Dialog
         open={open}
         onClose={handleClose}

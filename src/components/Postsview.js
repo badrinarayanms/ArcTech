@@ -52,13 +52,13 @@ const Postsview = () => {
               <TableBody>
                 {posts.map((post) => (
                   <TableRow key={post.id}>
-                    <TableCell sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }}>{post.title}</TableCell>
-                    <TableCell sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }}>{post.body}</TableCell>
-                    <TableCell sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }} >
+                    <TableCell sx={{textAlign:{xs:'justify',md:'none'}, fontSize: { xs: '0.6rem', sm: '1rem', md: '1.2rem' } }}>{post.title}</TableCell>
+                    <TableCell sx={{textAlign:{xs:'justify',md:'none'},fontSize: { xs: '0.5rem', sm: '1rem', md: '1.2rem' } }}>{post.body}</TableCell>
+                    <TableCell sx={{textAlign:{xs:'justify',md:'none'}, fontSize: { xs: '0.6rem', sm: '1rem', md: '1.2rem' } }} >
                     <Box display="flex" flexDirection="column" gap={1}>
                     <Commentview postid={post.id}/> 
                     
-                      <Button size='small' onClick={() => handleDelete(post.id)} variant='outlined' fullWidth color="primary">
+                      <Button sx={{textAlign:{xs:'justify',md:'none'}, fontSize: { xs: '0.6rem', sm: '1rem', md: '1.2rem' } }} size='small' onClick={() => handleDelete(post.id)} variant='outlined' fullWidth color="primary">
                         Delete
                       </Button>
                     </Box>
@@ -68,7 +68,7 @@ const Postsview = () => {
                 ))}
               </TableBody>
             </Table>
-          </TableContainer>:<Typography textAlign={'center'} variant='h1'>LOADING...</Typography>}
+          </TableContainer>:<Typography sx={{ fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' } }} textAlign={'center'} variant='h1'>LOADING...</Typography>}
         </Grid>
       </Grid>
       </Box>
